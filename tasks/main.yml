@@ -1,0 +1,26 @@
+---
+# tasks file for ansible-get-dbt
+
+ - name: Install OS requirements
+   package: 
+     name:
+       - libpq-dev
+       - python-dev
+       - python-setuptools
+       - python3-pip
+     state: latest
+
+ - name: Install DBT requirements1
+   pip: 
+     name: 
+       - cffi
+     extra_args: --upgrade
+
+ - name: Install DBT requirements
+   pip: 
+     name: cryptography>=3.4
+
+ - name: Install DBT using pip
+   pip:
+    name: dbt
+     
