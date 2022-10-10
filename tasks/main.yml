@@ -22,5 +22,5 @@
 
  - name: Install DBT using pip
    pip:
-    name: dbt
+    name: dbt-core
      
